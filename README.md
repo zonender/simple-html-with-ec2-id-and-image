@@ -1,0 +1,1 @@
+# simple-html-with-ec2-id-and-image
