@@ -1,4 +1,4 @@
-# simple-html-with-ec2-id-and-image-bmw
+# simple-html-with-ec2-id-and-image-merc
 
 to install apache server on an instance via userdata:
 
