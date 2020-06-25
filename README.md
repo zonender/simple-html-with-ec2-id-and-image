@@ -19,8 +19,8 @@ chmod -R o+r /var/www/html/merc
 git clone https://github.com/zonender/simple-html-with-ec2-id-and-image-merc.git /var/www/html/merc
 ec2id=$(curl http://169.254.169.254/latest/meta-data/instance-id)
 ec2ip=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
-sed -i "s/ec2id/$ec2id/g" /var/www/html/merc/merc.html
-sed -i "s/ec2ip/$ec2ip/g" /var/www/html/merc/merc.html
+sed -i "s/ec2id/$ec2id/g" /var/www/html/merc/index.html
+sed -i "s/ec2ip/$ec2ip/g" /var/www/html/merc/index.html
 ```
 
 To run it from the command line directly:
@@ -39,6 +39,6 @@ sudo chmod -R o+r /var/www/html/merc
 sudo git clone https://github.com/zonender/simple-html-with-ec2-id-and-image-merc.git /var/www/html/merc
 ec2id=$(curl http://169.254.169.254/latest/meta-data/instance-id)
 ec2ip=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
-sudo sed -i "s/ec2id/$ec2id/g" /var/www/html/merc/merc.html
-sudo sed -i "s/ec2ip/$ec2ip/g" /var/www/html/merc/merc.html
+sudo sed -i "s/ec2id/$ec2id/g" /var/www/html/merc/index.html
+sudo sed -i "s/ec2ip/$ec2ip/g" /var/www/html/merc/index.html
 ```
