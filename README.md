@@ -37,8 +37,8 @@ sudo mkdir -p /var/www/html/sampledir
 sudo chown ec2-user:ec2-user /var/www/html/sampledir
 sudo chmod -R o+r /var/www/html/sampledir
 sudo git clone https://github.com/zonender/simple-html-with-ec2-id-and-image-merc.git /var/www/html/sampledir
-sudo ec2id=$(curl http://169.254.169.254/latest/meta-data/instance-id)
-sudo ec2ip=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
+ec2id=$(curl http://169.254.169.254/latest/meta-data/instance-id)
+ec2ip=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 sudo sed -i "s/ec2id/$ec2id/g" /var/www/html/sampledir/index.html
 sudo sed -i "s/ec2ip/$ec2ip/g" /var/www/html/sampledir/index.html
 ```
