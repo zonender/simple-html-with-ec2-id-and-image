@@ -21,6 +21,9 @@ ec2id=$(curl http://169.254.169.254/latest/meta-data/instance-id)
 ec2ip=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 sed -i "s/ec2id/$ec2id/g" /var/www/html/merc/index.html
 sed -i "s/ec2ip/$ec2ip/g" /var/www/html/merc/index.html
+mv /var/www/html/merc/defaultindex.html /var/www/html/index.html
+sed -i "s/ec2id/$ec2id/g" /var/www/html/index.html
+sed -i "s/ec2ip/$ec2ip/g" /var/www/html/index.html
 ```
 
 To run it from the command line directly:
@@ -41,4 +44,7 @@ ec2id=$(curl http://169.254.169.254/latest/meta-data/instance-id)
 ec2ip=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 sudo sed -i "s/ec2id/$ec2id/g" /var/www/html/merc/index.html
 sudo sed -i "s/ec2ip/$ec2ip/g" /var/www/html/merc/index.html
+mv /var/www/html/merc/defaultindex.html /var/www/html/index.html
+sudo sed -i "s/ec2id/$ec2id/g" /var/www/html/index.html
+sudo sed -i "s/ec2ip/$ec2ip/g" /var/www/html/index.html
 ```
